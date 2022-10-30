@@ -1,0 +1,185 @@
+.home-page {
+    height: fit-content;
+    box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    .main-info {
+        display: flex;
+        justify-content: space-between;
+        margin-block-start: 5rem;
+        flex-wrap: wrap;
+
+        .side-l {
+            position: relative;
+            height: 50vh;
+            flex-basis: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .background-img {
+                position: absolute;
+                top: 40%;
+                left: 0;
+                z-index: -1;
+                width: 500px;
+            }
+
+            .title {
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    margin-block-start: 0.5rem;
+
+                    span {
+                        padding: 0.5rem;
+                        color: white;
+                        background-color: #ff99da;
+                        background-image:
+                            radial-gradient(at 96% 29%, hsla(290, 66%, 71%, 1) 0px, transparent 50%),
+                            radial-gradient(at 36% 62%, hsla(315, 77%, 66%, 1) 0px, transparent 50%),
+                            radial-gradient(at 21% 72%, hsla(311, 84%, 78%, 1) 0px, transparent 50%);
+                        border-radius: 10px;
+                        font-size: 15px;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+
+            .card {
+                width: 350px;
+                height: 200px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 1rem;
+                button{
+                    align-self: flex-end;
+                    background: transparent;
+                    border: 0;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                .user-balance {
+                    align-self: flex-end;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 35px;
+                    }
+
+                    h3 {
+                        margin-inline-end: 0.3rem;
+                    }
+                }
+
+                background-color: #ff99da;
+                background-image: radial-gradient(at 56% 71%, hsla(274, 61%, 62%, 1) 0px, transparent 50%),
+                radial-gradient(at 96% 29%, hsla(290, 66%, 71%, 1) 0px, transparent 50%),
+                radial-gradient(at 36% 62%, hsla(315, 77%, 66%, 1) 0px, transparent 50%),
+                radial-gradient(at 21% 72%, hsla(311, 84%, 78%, 1) 0px, transparent 50%);
+
+            }
+        }
+
+        .side-r {
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                text-align: center;
+            }
+
+            table {
+                width: 100%;
+                height: 50%;
+                border-collapse: collapse;
+
+                thead {
+                    width: 100%;
+
+                    select {
+                        background: hsla(274, 61%, 62%, 1);
+                        border-top: 0;
+                        border-left: 0;
+                        border-right: 0;
+                        color: white;
+                    }
+                }
+
+                tbody {
+                    tr {
+                        background-color: hsla(290, 66%, 71%, 1);
+                        padding: 0;
+                        td {
+                            border-right: 1px solid #289FED;
+                            width: 50%;
+                            height: 25%;
+                            color: white;
+                            font-size: 1rem;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .transactions{
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page {
+        height: fit-content;
+        box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        .main-info {
+            padding: 0 1rem;
+            margin-block-start: 3rem;
+            justify-content: center;
+            box-shadow: 0 0 0 0;
+            .side-l {
+                flex-basis: 100%;
+
+                .title {
+                    h1 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        margin-block-start: 3rem;
+                        font-size: 0.8rem;      
+                        span {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+                
+                .background-img{
+                    width: 300px;
+                }
+
+                .card {
+                    width: 100%;
+                    height: 170px;
+                }
+            }
+
+            .side-r {
+                height: 200px;
+                flex-basis: 100%;
+                margin-block-start: 1rem;
+            }
+        }
+    }
+
+}

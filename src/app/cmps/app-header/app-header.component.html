@@ -1,0 +1,24 @@
+<header>
+    <nav class="main-content">
+        <div class="title" routerLink="/">
+            <h1>Mr bitcoin</h1>
+            <img src="./assets/icons for misterBitcoin/coins.png" alt="coins">
+        </div>
+        <ul [ngClass]="navIsOpen ? 'opened' : ''">
+            <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleNav()">
+                <img src="./assets/icons for misterBitcoin/home.png" alt="">
+                <span>Home</span>
+            </li>
+            <li routerLink="/contact" routerLinkActive="active" (click)="toggleNav()">
+                <img src="./assets/icons for misterBitcoin/users.png" alt="Contacts">
+                <span>Contact</span>
+            </li>
+            <li routerLink="/stats" routerLinkActive="active" (click)="toggleNav()">
+                <img src="./assets/icons for misterBitcoin/increase.png" alt="">
+                <span>Statistic</span>
+            </li>
+        </ul>
+        <button class="hamburger" (click)="toggleNav()">☰</button>
+    </nav>
+
+</header>

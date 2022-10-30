@@ -1,0 +1,24 @@
+<section class="login-signup">
+    <div class="side-l">
+        <h3>Login to your account</h3>
+        <form [formGroup]="loginForm">
+            <input type="text" placeholder="Enter your username" formControlName="username">
+            <button (click)="onLogin()">Log in</button>
+        </form>
+        <p>{{error}}</p>
+    </div>
+    <div class="side-r">
+        <h3>Signup to Mr Bitcoin</h3>
+        <form>
+            <div class="input-label">
+                <label for="username">Username </label>
+                <input type="text" id="username">
+            </div>
+            <div class="input-label">
+                <label for="fullname">Full name </label>
+                <input type="text" id="fullname">
+            </div>
+            <button>Signup</button>
+        </form>
+    </div>
+</section>
