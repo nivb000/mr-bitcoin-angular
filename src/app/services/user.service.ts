@@ -55,8 +55,11 @@ export class UserService {
 
   addTransaction(transaction: Transaction) {
     const user = this._user$.value
-    user.transactions.push(transaction)
-    this._user$.next(user)
-    sessionStorage.setItem(this.KEY, JSON.stringify(user))
+    if(user && transaction.amount){
+      user.transactions.push(transaction)
+      user.balance -= transaction.amount
+      this._user$.next(user)
+      sessionStorage.setItem(this.KEY, JSON.stringify(user))
+    }
   }
 }
