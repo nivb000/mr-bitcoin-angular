@@ -144,7 +144,7 @@
         height: fit-content;
         box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
         .main-info {
-            padding: 0 1rem;
+            padding: 0 0.5rem;
             margin-block-start: 3rem;
             justify-content: center;
             box-shadow: 0 0 0 0;
@@ -156,8 +156,9 @@
                         font-size: 2rem;
                     }
                     p {
-                        margin-block-start: 3rem;
-                        font-size: 0.8rem;      
+                        margin-block-start: 1.5rem;
+                        font-size: 0.8rem;  
+                        line-height: 2.3; 
                         span {
                             font-size: 0.8rem;
                         }
@@ -165,6 +166,7 @@
                 }
                 
                 .background-img{
+                    top: 60%;
                     width: 300px;
                 }
 

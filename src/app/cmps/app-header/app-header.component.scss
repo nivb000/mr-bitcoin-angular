@@ -1,7 +1,6 @@
 header {
     background: transparent;
     padding: 1rem;
-
     nav {
         display: flex;
         justify-content: space-between;
@@ -59,7 +58,6 @@ header {
 @media (max-width: 600px) {
     header {
         padding: 0;
-        padding-block-start: 1rem;
         nav {
             margin: 1rem 0;
             flex-direction: column;
