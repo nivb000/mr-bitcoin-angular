@@ -16,7 +16,7 @@
             <div class="transfer">
                 <h5>Transfer Bitcoin</h5>
                     <form [formGroup]="transferForm">
-                        <input type="number" placeholder="amount" required formControlName="amount">
+                        <input type="number" placeholder="amount" min="1" [max]="loggedInUser.balance" required formControlName="amount">
                         <button (click)="sendTransaction()">Send</button>
                     </form>
                 </div>
