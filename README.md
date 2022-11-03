@@ -46,3 +46,6 @@ then
 ```
 
 or [Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
+
+
+#### Not intended for real use
