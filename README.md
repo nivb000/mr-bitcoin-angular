@@ -43,4 +43,4 @@ then
     ng serve
 ```
 
-or [Live Here] (https://nivb000.github.io/mr-bitcoin-angular/#/)
+or [Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
