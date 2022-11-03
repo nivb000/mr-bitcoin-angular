@@ -2,9 +2,11 @@
 
 Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
 
-[Project Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
+<h3>Builded with Angular</h3>
 
-<a href="#techstack">All Tech stacks here</a>
+<a href="#techstack">For all Tech stacks</a>
+
+[Project Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
 
 
 
