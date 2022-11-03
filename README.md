@@ -1,11 +1,40 @@
-# Mr Bitcoin Angular
+# Mr Bitcoin
 
-## this is a fully responsive Bitcoin transfer demo app
+Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
 
-### This project is build using Angular with rxjs , scss , HttpClient , Angular Router, Route and forms
+[Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
 
-#### This project live [here](https://nivb000.github.io/mr-bitcoin-angular/#/)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Screenshots
+
+![Home page](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477154/Mr%20bitcoin%20angular%20screenshots/Mr-Bitcoin_Angular_Homepage_bgopmz.png)
+![Contact page](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477152/Mr%20bitcoin%20angular%20screenshots/Mr-Bitcoin_Angular_Contact_page_rkz2fb.png)
+
+
+### Fully responsive
+
+![Home page responsive](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477387/Mr%20bitcoin%20angular%20screenshots/Home_page_responsive_aekhzs.png)
+#
+![Contact page responsive](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477386/Mr%20bitcoin%20angular%20screenshots/contact_page_responsive_atwkhi.png)
+
+## Tech Stack
+
+#### Angular, rxjs, observable, SCSS , HttpClient , Angular Router, Route and forms
+
+
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm i
+```
+
+then
+
+```bash
+    ng serve
+```
