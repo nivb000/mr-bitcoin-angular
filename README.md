@@ -2,6 +2,8 @@
 
 Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
 
+<a href="#techstack">Tech stack here</a>
+
 [Live Here](https://nivb000.github.io/mr-bitcoin-angular/#/)
 
 
@@ -20,7 +22,7 @@ Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
 
 
 
-<h2 align="left">Tech Stack</h2>
+<h2 align="left" id="techstack">Tech Stack</h2>
 
 <h3>Angular, rxjs, observable, SCSS , HttpClient , Angular Router, Route and forms</h3>
 
@@ -40,3 +42,5 @@ then
 ```bash
     ng serve
 ```
+
+or [Live Here] (https://nivb000.github.io/mr-bitcoin-angular/#/)
