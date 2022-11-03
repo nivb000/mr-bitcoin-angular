@@ -14,9 +14,10 @@ Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
 
 ### Fully responsive
 
-![Home page responsive](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477387/Mr%20bitcoin%20angular%20screenshots/Home_page_responsive_aekhzs.png)
-#
-![Contact page responsive](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477386/Mr%20bitcoin%20angular%20screenshots/contact_page_responsive_atwkhi.png)
+<img align="left" top="500" height="300" width="400" alt="GIF" src="https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477387/Mr%20bitcoin%20angular%20screenshots/Home_page_responsive_aekhzs.png">
+
+<img align="right" top="500" height="300" width="400" alt="GIF" src="https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477386/Mr%20bitcoin%20angular%20screenshots/contact_page_responsive_atwkhi.png">
+
 
 ## Tech Stack
 
