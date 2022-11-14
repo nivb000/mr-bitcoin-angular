@@ -1,6 +1,7 @@
 # Mr Bitcoin
 
-Mr bitcoin is an **DEMO** app where you can exchange bitcoin for free
+Mr bitcoin is an **DEMO** app where you can exchange bitcoin to contacts for free
+and to add,remove or edit contact.
 
 <h3>Builded with Angular <img src="https://github.com/get-icon/geticon/raw/master/icons/angular-icon.svg" alt="Angular" width="30px" height="30px"></h3>
 <h3>App is live <a href="https://nivb000.github.io/mr-bitcoin-angular/#/">here</a></h3>
