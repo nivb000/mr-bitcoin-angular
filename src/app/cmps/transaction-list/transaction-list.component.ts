@@ -22,8 +22,7 @@ export class TransactionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.userService.user$.subscribe(user => this.loggedInUser = user)
-    this.transactions = this.loggedInUser.transactions.slice(0,3)
+    this.transactions = this.loggedInUser?.transactions.slice(0,3)
     if(this.contactId) this.transactions = this.transactions.filter((t:Transaction) => t.toId === this.contactId)
   }
-
 }
