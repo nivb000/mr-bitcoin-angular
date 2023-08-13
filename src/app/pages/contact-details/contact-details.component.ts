@@ -16,23 +16,24 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   //Imports using inject
   route = inject(ActivatedRoute)
   router = inject(Router)
+  /* todo - move all to constructor - example -> private userService: UserService */
   fBuilder = inject(FormBuilder)
   userService = inject(UserService)
-  
-  
+
+
   constructor() {
     this.transferForm = this.fBuilder.group({
       amount: [0]
     })
   }
-  
+
   //Variables
   subscription!: Subscription
   contact!: Contact
   transferForm!: FormGroup
   sub!: Subscription
   loggedInUser!: User
-  
+
   async ngOnInit() {
     this.subscription = this.route.data.subscribe(data => {
       const contact = data['ContactResolverResolver']

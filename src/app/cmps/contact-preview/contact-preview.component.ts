@@ -14,5 +14,5 @@ export class ContactPreviewComponent {
   onRemoveContact(){
     this.onRemove.emit(this.contact._id)
   }
-
+  // todo - should manage by module
 }

@@ -1,3 +1,4 @@
+/* todo - why do you need all those models? */
 export class Contact {
 
     constructor(

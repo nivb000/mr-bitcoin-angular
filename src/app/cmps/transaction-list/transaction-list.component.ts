@@ -10,10 +10,10 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./transaction-list.component.scss']
 })
 export class TransactionListComponent implements OnInit {
-
+  /* todo - why undefined needed ? */
   @Input() contactId!: string | undefined
+  /* todo - can be in constructor private userService: UserService */
   userService = inject(UserService)
-
   constructor() { }
 
   sub!: Subscription

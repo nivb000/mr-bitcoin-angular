@@ -17,5 +17,5 @@ export class ContactListComponent {
   onRemoveContact(ev:string){
     this.onRemove.emit(ev)
   }
-
+  // todo - should manage by module
 }

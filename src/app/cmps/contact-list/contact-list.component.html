@@ -1,3 +1,5 @@
 <ul>
-    <li *ngFor="let contact of contacts"><contact-preview (onRemove)="onRemoveContact($event)" [contact]="contact"></contact-preview></li>
+  <li *ngFor="let contact of contacts">
+    <contact-preview (onRemove)="onRemoveContact($event)" [contact]="contact"></contact-preview>
+  </li>
 </ul>

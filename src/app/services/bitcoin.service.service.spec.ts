@@ -13,4 +13,6 @@ describe('BitcoinServiceService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  // todo - should delete all unused spec files
 });

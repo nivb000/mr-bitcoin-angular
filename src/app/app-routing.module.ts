@@ -8,6 +8,12 @@ import { LoginSignupComponent } from './pages/login-signup/login-signup.componen
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { ContactResolverResolver } from './services/contact-resolver.resolver'
 
+/* todo - implement here lazy loading
+*   example:
+*     {
+      path: 'contact/new',
+      loadChildren: () => import('./pages/contact-edit/contact-edit.component.module').then(m => m.NotFoundResourceViewModule)
+    } */
 const routes: Routes = [
   {path: 'contact/edit/:id', component: ContactEditComponent, resolve: {Contact: ContactResolverResolver}},
   {path: 'contact/new', component: ContactEditComponent},
@@ -15,6 +21,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'stats', component: StatisticPageComponent},
   {path: 'login', component: LoginSignupComponent},
+  // todo - add here attribute pathMatch: 'full'
   {path: '', component: HomePageComponent}
 ];
 // For children routes we need to declare <router-outlet> in the component

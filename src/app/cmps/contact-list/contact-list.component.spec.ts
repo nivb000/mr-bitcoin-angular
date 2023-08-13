@@ -20,4 +20,6 @@ describe('ContactListComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // todo - should delete all unused spec files
 });
