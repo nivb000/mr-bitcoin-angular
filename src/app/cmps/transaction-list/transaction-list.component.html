@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let transaction of transactions">
+        <p>From: {{transaction.fromName}}</p>
+        <p>Amount: {{transaction.amount}} (BTC)</p>
+        <p>At: {{transaction.at}}</p>
+    </li>
+</ul>

@@ -1,0 +1,54 @@
+<section class="home-page">
+    <div class="main-info">
+        <div class="side-l">
+            <img class="background-img" src="./assets/background1.png" alt="background">
+            <div class="title" *ngIf="!loggedInUser; else userCard">
+                <h1>Welcome to <br> Mr bitcoin</h1>
+                <p>Where You can exhchange bitcoin fast and easily</p>
+                <p><span routerLink="/login">Log in</span> or <span routerLink="/login">Sign up</span> and exhchange Bitcoin for free!</p>
+            </div>
+            <ng-template #userCard>
+                <div class="card">
+                    <h3>{{loggedInUser.fullName}}</h3>
+                    <div class="user-balance">
+                        <h3>{{loggedInUser.balance}}</h3>
+                        <img src="./assets/icons for misterBitcoin/bitcoin.png" alt="BitCoin">
+                    </div>
+                    <button (click)="onLogout()">Log out</button>
+                </div>
+            </ng-template>
+        </div>
+        <div class="side-r">
+            <h1>1 Bitcoin Rate today</h1>
+            <table>
+                <thead>
+                    <select name="currency" id="currency" [ngModel]="currency" (ngModelChange)="getCurrencyRate($event)">
+                        <option *ngFor="let currency of ratesKey" [ngValue]="currency">{{currency}}</option>
+                    </select>
+                </thead>
+                <tbody *ngIf="rate">
+                    <tr>
+                        <td>15 minutes</td>
+                        <td>{{rate['15m'] | currency:currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Buy</td>
+                        <td>{{rate.buy | currency:currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Last</td>
+                        <td>{{rate.last | currency:currency}}</td>
+                    </tr>
+                    <tr>
+                        <td>Sell</td>
+                        <td>{{rate.sell | currency:currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="transactions">
+        <h3>Your latest transactions:</h3>
+        <transaction-list></transaction-list>
+    </div>
+</section>

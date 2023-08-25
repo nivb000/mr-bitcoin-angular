@@ -1,0 +1,17 @@
+ul{
+    margin-block-start: 3rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    li{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 200px;
+        height: 90px;
+        background-color: steelblue;
+        border-radius: 15px;
+        padding-inline-start: 0.3rem;
+    }
+}
