@@ -1,30 +1,44 @@
 <section class="home-page">
     <div class="main-info">
         <div class="side-l">
-            <img class="background-img" src="./assets/background1.png" alt="background">
             <div class="title" *ngIf="!loggedInUser; else userCard">
                 <h1>Welcome to <br> Mr bitcoin</h1>
-                <p>Where You can exhchange bitcoin fast and easily</p>
-                <p><span routerLink="/login">Log in</span> or <span routerLink="/login">Sign up</span> and exhchange Bitcoin for free!</p>
+                <p>Where You can exchange bitcoin fast and easily</p>
+                <p><span routerLink="/login">Log in</span> or <span routerLink="/login">Sign up</span> and start exchange Bitcoin for free!</p>
+                <img class="background-img" src="./assets/background1.png" alt="background">
             </div>
             <ng-template #userCard>
                 <div class="card">
-                    <h3>{{loggedInUser.fullName}}</h3>
+                    <h3 class="username">{{loggedInUser.fullName}}</h3>
+                    <img src="./assets/icons/chip.png" alt="chip">
                     <div class="user-balance">
                         <h3>{{loggedInUser.balance}}</h3>
-                        <img src="./assets/icons for misterBitcoin/bitcoin.png" alt="BitCoin">
+                        <img src="./assets/icons/bitcoin.png" alt="BitCoin" />
                     </div>
                     <button (click)="onLogout()">Log out</button>
                 </div>
             </ng-template>
         </div>
         <div class="side-r">
-            <h1>1 Bitcoin Rate today</h1>
+            <div class="table-heading">
+                <div class="img-container">
+                    <img src="./assets/icons/bitcoin.png" alt="BitCoin" />
+                </div>
+                <h1>BTC Rate</h1>
+                <div class="img-container">
+                    <img src="./assets/icons/bitcoin.png" alt="BitCoin" />
+                </div>
+            </div>
             <table>
                 <thead>
-                    <select name="currency" id="currency" [ngModel]="currency" (ngModelChange)="getCurrencyRate($event)">
-                        <option *ngFor="let currency of ratesKey" [ngValue]="currency">{{currency}}</option>
-                    </select>
+                    <th>
+                        <select name="currency" id="currency" [ngModel]="currency" (ngModelChange)="getCurrencyRate($event)">
+                            <option *ngFor="let currency of ratesKey" [ngValue]="currency">{{currency}}</option>
+                        </select>
+                    </th>
+                    <th>
+                        <span>Last updated: today</span>
+                    </th>
                 </thead>
                 <tbody *ngIf="rate">
                     <tr>
@@ -47,8 +61,8 @@
             </table>
         </div>
     </div>
-    <div class="transactions">
-        <h3>Your latest transactions:</h3>
+    <div class="transactions" *ngIf="this.loggedInUser">
+        <h3>Your latest transactions</h3>
         <transaction-list></transaction-list>
     </div>
 </section>

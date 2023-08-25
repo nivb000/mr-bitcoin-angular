@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app-root/app.component';
 import { AppHeaderComponent } from './cmps/app-header/app-header.component';
@@ -14,6 +14,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginSignupComponent } from './pages/login-signup/login-signup.component';
 import { ContactEditComponent } from './pages/contact-edit/contact-edit.component';
 import { TransactionListComponent } from './cmps/transaction-list/transaction-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { TransactionListComponent } from './cmps/transaction-list/transaction-li
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,21 @@
-<p>statistic-page works!</p>
+<section>
+    <h3>Statistics</h3>
+    <div *ngIf="rates.length > 0; else nodata" >
+        <ngx-charts-bar-vertical 
+        [view]="view" 
+        [scheme]="colorScheme" 
+        [results]="rates" 
+        [gradient]="gradient"
+        [xAxis]="showXAxis" 
+        [yAxis]="showYAxis" 
+        [legend]="showLegend" 
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel" 
+        [xAxisLabel]="xAxisLabel" 
+        [yAxisLabel]="yAxisLabel">
+        </ngx-charts-bar-vertical>
+    </div>
+    <ng-template #nodata>
+        <h3>Error, Cannot fetch data</h3>
+    </ng-template>
+</section>

@@ -11,14 +11,10 @@ export class BitcoinService {
   constructor(private http: HttpClient) { }
 
   getRate(): Observable<Object> {
-    return this.http.get(`https://blockchain.info/ticker`).pipe(map(res => {
-      return res
-    }))
+    return this.http.get(`https://blockchain.info/ticker`).pipe(map(res => res))
   }
   getRatesKeys<T>(): Observable<Array<string>> {
-    return this.http.get(`https://blockchain.info/ticker`).pipe(map(res => {
-      return Object.keys(res);
-    }))
+    return this.http.get(`https://blockchain.info/ticker`).pipe(map(res => Object.keys(res)))
   }
 
 }
