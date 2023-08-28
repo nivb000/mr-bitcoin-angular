@@ -79,12 +79,11 @@
                     grid-row: 3;
                     grid-column: 4 / 6;
                     justify-self: center;
-                    img {
-                        width: 35px;
-                    }
 
                     h3 {
-                        margin-inline-end: 0.3rem;
+                        span{
+                            color: green;
+                        }
                     }
                 }
             }
@@ -94,7 +93,6 @@
             flex-basis: 40%;
             display: flex;
             flex-direction: column;
-
             .table-heading{
                 display: flex;
                 align-items: center;
@@ -110,6 +108,13 @@
                         font-size: 0.9rem;
                     }
                 }
+            }
+            
+            img[alt~="background2"]{
+                position: absolute;
+                top: 30%;
+                left: 25%;
+                z-index: -1;
             }
 
             table {

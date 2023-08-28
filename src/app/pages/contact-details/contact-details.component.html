@@ -1,9 +1,8 @@
 <section class="contact-details">
     <div class="title">
+        <img src="./assets/icons/back.png" alt="Go back" (click)="onGoBack()" class="btn-back">
         <h1>Contact details</h1>
-        <img src="./assets/icons/contact.png" alt="Contact">
     </div>
-    <img src="./assets/icons/back.png" alt="Go back" (click)="onGoBack()" class="btn-back">
     <article class="contact-main-info">
         <div class="side-l">
             <img src='{{"https://avatars.dicebear.com/api/avataaars/" +contact.name +".svg"}}' alt="Contact Profile Pic">
@@ -14,7 +13,7 @@
             <p><span>Email address</span>: {{contact.email}}</p>
             <p><span>Phone number</span>: {{contact.phone}}</p>
             <div class="transfer">
-                <h5>Transfer Bitcoin</h5>
+                <h5>Transfer Bitcoin &#40;{{loggedInUser.balance}} BTC Avaliable&#41;</h5>
                     <form [formGroup]="transferForm">
                         <input type="number" placeholder="amount" min="1" [max]="loggedInUser.balance" required formControlName="amount">
                         <button (click)="sendTransaction()">Send</button>
@@ -24,6 +23,6 @@
     </article>
     <section class="transactions-list">
         <h1>Your Transactions</h1>
-        <transaction-list [contactId]="contact._id"></transaction-list>
+        <transaction-list [contactName]="contact.name"></transaction-list>
     </section>
 </section>

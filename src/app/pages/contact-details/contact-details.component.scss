@@ -9,10 +9,10 @@
         }
     }
     .title{
+        display: flex;
+        justify-content: space-between;
+        width: 63%;
         margin: 1rem 0;
-        text-align: center;
-        h1{display: inline;margin-inline-end: 1rem;}
-        img{width: 30px;}
     }
     article{
         margin-block-start: 2rem;

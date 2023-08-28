@@ -12,8 +12,7 @@
                     <h3 class="username">{{loggedInUser.fullName}}</h3>
                     <img src="./assets/icons/chip.png" alt="chip">
                     <div class="user-balance">
-                        <h3>{{loggedInUser.balance}}</h3>
-                        <img src="./assets/icons/bitcoin.png" alt="BitCoin" />
+                        <h3>BTC: <span>{{loggedInUser.balance}}</span></h3>
                     </div>
                     <button (click)="onLogout()">Log out</button>
                 </div>
@@ -29,6 +28,7 @@
                     <img src="./assets/icons/bitcoin.png" alt="BitCoin" />
                 </div>
             </div>
+            <img src="./assets/background2.png" alt="background2" *ngIf="loggedInUser;">
             <table>
                 <thead>
                     <th>

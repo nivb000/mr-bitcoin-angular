@@ -1,5 +1,8 @@
 <section>
-    <h3>Statistics</h3>
+    <div class="title">
+        <h3>Statistics &nbsp;&nbsp;</h3>
+        <img src="./assets/icons/increase.png" alt="increase">
+    </div>
     <div *ngIf="rates.length > 0; else nodata" >
         <ngx-charts-bar-vertical 
         [view]="view" 

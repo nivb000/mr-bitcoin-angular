@@ -3,6 +3,7 @@
         <h3>Login to your account</h3>
         <form [formGroup]="loginForm">
             <input type="text" placeholder="Enter your username" formControlName="username">
+            <span>Username: puki</span>
             <button (click)="onLogin()">Log in</button>
         </form>
         <p>{{error}}</p>

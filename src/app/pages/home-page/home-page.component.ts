@@ -26,7 +26,6 @@ export class HomePageComponent implements OnInit {
     this.ratesKey = await lastValueFrom(this.bitcoinService.getRatesKeys());
     this.subscribe = this.userService.user$.subscribe(user => this.loggedInUser = user)
     await this.getCurrencyRate()
-    console.log(this.loggedInUser)
   }
   
   async getCurrencyRate(currency?:string){

@@ -1,17 +1,28 @@
-ul{
-    margin-block-start: 3rem;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    li{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 200px;
-        height: 90px;
-        background-color: steelblue;
-        border-radius: 15px;
-        padding-inline-start: 0.3rem;
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 3rem 0;
+    td, th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
     }
-}
+    tr:nth-child(even){background-color: #f2f2f2;}
+    
+    tr:hover {background-color: #ddd;}
+    
+    .th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      color: white;
+    }
+    .home-th{
+      background-color: #f5d020;
+      background-image: linear-gradient(315deg, #f53803 0%, #f5d020 74%);
+    }
+    .contact-th{
+      background-color: #8bb7f0;
+    }
+  }
+  
+  

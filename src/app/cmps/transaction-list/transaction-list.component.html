@@ -1,7 +1,20 @@
-<ul>
-    <li *ngFor="let transaction of transactions">
-        <p>From: {{transaction.fromName}}</p>
-        <p>Amount: {{transaction.amount}} (BTC)</p>
-        <p>At: {{transaction.at}}</p>
-    </li>
-</ul>
+<table>
+    <table>
+        <thead>
+            <tr [ngClass]="router.url === '/' ? 'home-th' : 'contact-th' ">
+                <th>From</th>
+                <th>To</th>
+                <th>Amount &#40;BTC&#41;</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let transaction of transactions">
+                <td>{{transaction.fromName}}</td>
+                <td>{{transaction.toName}}</td>
+                <td>{{transaction.amount}}</td>
+                <td>{{transaction.at}}</td>
+            </tr>
+        </tbody>
+    </table>
+</table>

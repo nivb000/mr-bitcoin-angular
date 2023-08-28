@@ -18,42 +18,41 @@ export class ContactDetailsComponent implements OnInit, OnDestroy {
   router = inject(Router)
   fBuilder = inject(FormBuilder)
   userService = inject(UserService)
-  
-  
+
+
   constructor() {
     this.transferForm = this.fBuilder.group({
       amount: [0]
     })
   }
-  
+
   //Variables
   subscription!: Subscription
   contact!: Contact
   transferForm!: FormGroup
   sub!: Subscription
   loggedInUser!: User
-  
+
   async ngOnInit() {
     this.subscription = this.route.data.subscribe(data => {
       const contact = data['ContactResolverResolver']
-      if(contact) this.contact = contact
+      if (contact) this.contact = contact
     })
     this.sub = this.userService.user$.subscribe(user => this.loggedInUser = user)
   }
 
-  sendTransaction(){
-    const {amount} = this.transferForm.value
+  sendTransaction() {
+    const { amount } = this.transferForm.value
     const transaction: Transaction = {
       fromName: this.loggedInUser.fullName,
-      toId: this.contact._id,
+      toName: this.contact.name,
       amount,
       at: `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`
     }
-    console.log('transaction ready is', transaction);
     this.userService.addTransaction(transaction)
   }
 
-  onGoBack(){
+  onGoBack() {
     this.router.navigateByUrl('/contact')
   }
 

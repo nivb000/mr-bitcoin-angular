@@ -1,20 +1,20 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Transaction } from 'src/app/models/transaction.model';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'transaction-list',
   templateUrl: './transaction-list.component.html',
   styleUrls: ['./transaction-list.component.scss']
 })
-export class TransactionListComponent implements OnInit {
+export class TransactionListComponent implements OnInit, OnChanges {
 
-  @Input() contactId!: string | undefined
+  @Input() contactName!: string
   userService = inject(UserService)
-
-  constructor() { }
+  router = inject(Router)
 
   sub!: Subscription
   loggedInUser!: User
@@ -22,7 +22,10 @@ export class TransactionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.sub = this.userService.user$.subscribe(user => this.loggedInUser = user)
-    this.transactions = this.loggedInUser?.transactions.slice(0,3)
-    if(this.contactId) this.transactions = this.transactions.filter((t:Transaction) => t.toId === this.contactId)
+    this.transactions = this.loggedInUser?.transactions
+    if(this.contactName) this.transactions = this.transactions.filter((t:Transaction) => t.toName === this.contactName)
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {    
   }
 }
