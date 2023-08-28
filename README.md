@@ -22,13 +22,13 @@ and to add,remove or edit contact.
 
 ## Screenshots
 
-![Home page](https://res.cloudinary.com/dhe2rvexr/image/upload/v1668455373/Mr%20bitcoin%20angular%20screenshots/Screenshot_2022-11-14_at_21-48-54_Mr-Bitcoin_Angular_pi2cyu.png)
+![Home page](https://res.cloudinary.com/dhe2rvexr/image/upload/v1693218734/Mr%20bitcoin%20angular%20screenshots/Screenshot_2023-08-28_at_13-31-01_Mr_Bitcoin_Angular_tnvgb5.png)
 ![Contact page](https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477152/Mr%20bitcoin%20angular%20screenshots/Mr-Bitcoin_Angular_Contact_page_rkz2fb.png)
 
 
 ### Fully responsive
 
-<img align="left" top="500" height="400" width="200" alt="Responsive Home page" src="https://res.cloudinary.com/dhe2rvexr/image/upload/v1668455372/Mr%20bitcoin%20angular%20screenshots/nivb000.github.io_mr-bitcoin-angular__iPhone_6_7_8_q7qbcv.png">
+<img align="left" top="500" height="400" width="200" alt="Responsive Home page" src="https://res.cloudinary.com/dhe2rvexr/image/upload/v1693218734/Mr%20bitcoin%20angular%20screenshots/nivb000.github.io_mr-bitcoin-angular__iPhone_6_7_8_khwdr6.png">
 
 <img align="center" top="500" height="400" width="200" alt="Responsive Contact page" src="https://res.cloudinary.com/dhe2rvexr/image/upload/v1667477386/Mr%20bitcoin%20angular%20screenshots/contact_page_responsive_atwkhi.png">
 
